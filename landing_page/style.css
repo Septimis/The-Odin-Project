@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+}
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#page {
+    display: flex;
+    flex-direction: column;
+}
+.section {
+    display: flex;
+    border: 2px solid black;
+    padding: 30px 300px;
+}
+
+#header-section,
+#title-section,
+#footer-section {
+    background-color: #1F2937;
+    color: white;
+}
