@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    text-align: center;
 }
 a:link,
 a:visited {
@@ -15,8 +16,8 @@ a:hover {
 }
 .section {
     display: flex;
-    border: 2px solid black;
-    padding: 30px 300px;
+    padding: 30px 10vw;
+    flex-wrap: wrap;
 }
 
 #header-section,
@@ -24,4 +25,40 @@ a:hover {
 #footer-section {
     background-color: #1F2937;
     color: white;
+}
+#header-section {
+    height: 10vh;
+}
+#header-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+#title-section {
+    background: url("img/hikerOnMountain.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: black;
+    height: 70vh;
+}
+
+.sign-up-btns {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #1F2937;
+    color: white;
+    font-style: 'Roboto', arial;
+    font-size: 16px;
+    padding: 8px;
+    font-weight: bold;
+}
+.sign-up-btns:hover {
+    background-color: white;
+    color: #1F2937;
+    -webkit-box-shadow: 0px 0px 10px 3px #000000; 
+    box-shadow: 0px 0px 10px 3px #000000; 
 }
