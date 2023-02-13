@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Odin Project - Etch-a-Sketch</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="col center">
+        <div id="header">
+            <h1>Etch-a-Sketch</h1>
+            <p>Paint away to your hearts content!</p>
+        </div>
+        <div id="menu" class="row">
+            <div id="pixelColorWrapper" class="col">
+                <label for="pixelColor">Color</label>
+                <input id="pixelColor" name="pixelColor" type="color">
+            </div>
+            <div id="randomColorWrapper" class="col">
+                <label for="isRandomColor">Random Color</label>
+                <input id="isRandomColor" name="isRandomColor" type="checkbox">
+            </div>
+            <div id="pixelSizeWrapper" class="col">
+                <label for="gridSize">Grid Size</label>
+                <select id="gridSize" name="gridSize">
+                    <option value="1">1x1</option>
+                    <option value="2">2x2</option>
+                    <option value="4">4x4</option>
+                    <option value="8">8x8</option>
+                    <option value="16">16x16</option>
+                    <option value="32">32x32</option>
+                    <option value="64">64x64</option>
+                    <option value="128">128x128</option>
+                    <option value="256">256x256</option>
+                    <option value="512">512x512</option>
+                </select>
+            </div>
+        </div>
+        <div id="gameBoardWrapper">
+            <!-- Auto-filled by JavaScript -->
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+</body>
+
+</html>
