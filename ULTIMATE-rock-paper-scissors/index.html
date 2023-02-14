@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+    <head>
+        <title>ULTIMATE Rock, Paper, Sissors</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+				<script src="script.js" defer></script>
+    </head>
+    <body id="body">
+        <div id="header">
+            <h1 class="ultimateHeaderText">ULTIMATE</h1>
+            <h1 class="ultimateHeaderText" id="rpsText">Rock! Paper! Scissors!!!</h1>
+        </div>
+        <!-- HOME SCREEN ITEMS --> 
+        <div class="mainBody homeScreen">
+            <button id="startButton" class="floatingItems glow">START GAME</button>
+            <!-- Where the user can see current experience & active effects -->
+            <div id="userStats" class="floatingItems">
+                <p id="currentExperience">0 xp</p>
+                <p id="activeEffects"></p>
+            </div>
+
+            <!-- UPGRADE TABLES -->
+            <p class="containerTitles">Progress</p>
+            <table class="upgradeTables floatingItems">
+                <tr>
+                    <th>Currently Equipped</th>
+                    <th class="rankText">Current Rank</th>
+                    <th>Upgrade</th>
+                    <th></th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="equippedRock" class="equippedItems">Rock</span>
+                    </td>
+                    <td class="rankText">
+                        <span id="rockRank"></span>
+                    </td>
+                    <td>
+                        <span id="rockUpgradeTitle">Coal</span><br>
+                        <span id="rockUpgradeDescription">There is a 25% chance on a loss this round that your opponent will not gain a point.</span>
+                    </td>
+                        <td>
+                            <button id="rockUpgradeBtn" class="progressButtons glow">Upgrade</button> 
+                        </td>
+                    <td>
+                        <span id="rockNextUpgradeReqExp">50 xp</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="equippedPaper" class="equippedItems">Paper</span>
+                    </td>
+                    <td class="rankText">
+                        <span id="paperRank"></span>
+                    </td>
+                    <td>
+                        <span id="paperUpgradeTitle">Scroll</span><br>
+                        <span id="paperUpgradeDescription">Upon winning with paper, there is a 50% chance to activate a common spell, a 5% chance to activate a rare spell, and a 45% chance nothing will happen.</span>
+                    </td>
+                    <td>
+                        <button id="paperUpgradeBtn" class="progressButtons glow">Upgrade</button>
+                    </td>
+                    <td>
+                        <span id="paperNextUpgradeReqExp">50 xp</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="equippedScissors" class="equippedItems">Scissors</span>
+                    </td>
+                    <td class="rankText">
+                        <span id="scissorsRank"></span>
+                    </td>
+                    <td>
+                        <span id="scissorsUpgradeTitle">Kitchen Scissors</span><br>
+                        <span id="scissorsUpgradeDescription">Upon winning with scissors, there is a 25% chance to gain an additional point.</span>
+                    </td>
+                        <td>
+                            <button id="scissorUpgradeBtn" class="progressButtons glow">Upgrade</button>
+                        </td>
+                    <td>
+                        <span id="scissorsNextUpgradeReqExp">50 xp</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Experience Multiplier</strong><br>
+                    </td>
+                    <td></td>
+                    <td>
+                        <input type="range" min="2" max="200" value="1" id="xpSlider"><br>
+                        <em>For your next game only.  You may equip up to x200 xp for an experience multiplier.</em>
+                        </td>
+                    <td>
+                        <input type="number" pattern="\d*" title="Numbers Only" value="1" id="xpTextBox">
+                        <button id="expBonusBtn" class="progressButtons glow">Buy</button>
+                    </td>
+                    <td>
+                        <span id="expBonusCost">30 xp<span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>End Game</strong>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <em>Requires that all achievments have been accomplished.</em>
+                    </td>
+                    <td>
+                        <button id="endGameBtn" class="progressButtons glow">Buy</button>
+                    </td>
+                    <td>
+                        <strong>100,000 xp</strong>
+                    </td>
+                </tr>
+            </table>
+            <!-- ACHIEVEMENTS TABLE -->
+            <p class="containerTitles">Achievements</p>
+            <table class="upgradeTables floatingItems">
+                <tr>
+                    <th>Title</th>
+                    <th>Reward</th>
+                </tr>
+                <tr id="welcomeAchievment" class="achievments">
+                    <td>
+                        <strong>Welcome!</strong><br>
+                        <em>Play Your First Game</em>
+                    </td>
+                    <td>+5 xp</td>
+                </tr>
+                <tr id="onlyOneAchievment" class="achievments">
+                    <td>
+                        <b>Favoritism</b><br>
+                        <i>Win a Game by Only Choosing Either Rock, Paper, or Scissors</i>
+                    </td>
+                    <td>+10 xp</td>
+                </tr>
+                <tr id="perfectionAchievment" class="achievments">
+                    <td>
+                        <b>Perfection</b><br>
+                        <i>End a Game With a Score of 5 to 0</i>
+                    </td>
+                    <td>+20 xp</td>
+                </tr>
+
+                <tr id="rockAchievment" class="achievments">
+                    <td>
+                        <b>Gneiss Work</b><br>
+                        <i>Upgrade Your Rock to Level 5</i>
+                    </td>
+                    <td>+50 xp</td>
+                </tr>
+                <tr id="paperAchievment" class="achievments">
+                    <td>
+                        <b>Not so Tearable</b><br>
+                        <i>Upgrade Your Paper to Level 5</i>
+                    </td>
+                    <td>+50 xp</td>
+                </tr>
+                <tr id="scissorsAchievment" class="achievments">
+                    <td>
+                        <b>A Cut Above the Rest</b><br>
+                        <i>Upgrade Your Scissors to Level 5</i>
+                    </td>
+                    <td>+50 xp</td>
+                </tr>
+                <tr id="trifectaAchievment" class="achievments">
+                    <td>
+                        <b>Trifecta</b><br>
+                        <i>Upgrade Rock, Paper, and Scissors to Level 5</i>
+                    </td>
+                    <td>+100 xp</td>
+                </tr>
+                <tr id="dwayneAchievment" class="achievments">
+                    <td>
+                        <strong>Dwayne 'the Rock, Paper, Scissors' Johnson</strong><br>
+                        <em>Unlock the full power of Dwayne 'The Rock' Johnson</em>
+                    </td>
+                    <td>+1,000 xp</td>
+                </tr>
+                <tr id="expAchievment" class="achievments">
+                    <td>
+                        <strong>Overloaded</strong><br>
+                        <em>Earn over 10,000 xp in one game</em>
+                    </td>
+                    <td>+1,000 xp</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- GAME SCREEN ITEMS -->
+        <div class="mainBody gameScreen">
+          <div id="backBtnContainer">
+            <p id="backBtn">&lt; Back</p>
+          </div>
+          <!-- Buttons user selects to indicate their choice of rock, paper, or scissors -->
+          <div id="userSelectionBtns" class="fadeInItems">
+            <input type="button" alt="rock" id="rockBtn" class="userSelectionBtn glow">
+            <input type="button" alt="paper" id="paperBtn" class="userSelectionBtn glow">
+            <input type="button" alt="scissors" id="scissorsBtn" class="userSelectionBtn glow">
+          </div>
+          <div id="battlefield">
+            <p id="outcomeText"></p>
+            <table id="battleTable" class="fadeInItems">
+              <tr>
+                <th>You</th>
+                <th>Computer</th>
+              </tr>
+              <tr>
+                <td>
+                  <img src="" alt="Your Choice" id="userSelection" class="outcomeImg">
+                </td>
+                <td>
+                  <img src="" alt="Computer Choice" id="computerSelection" class="outcomeImg">
+                </td>
+              </tr>
+              <tr>
+                <td id="userScore">0</td>
+                <td id="computerScore">0</td>
+              </tr>
+            </table>
+          </div>          
+        </div>
+
+        <div id="footerWrapper">
+          <div id="footer">
+            <span id="guideLink" class="footerContent">Game Guide</span>
+            <span>
+              <a href="https://github.com/Septimis/rock-paper-sissors" target="_blank" rel="noopener noreferrer" class="footerContent">GitHub</a>
+              </span>
+          </div>
+        </div>
+
+        
+    </body>
+</html>
