@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="createBoard()">
     <div class="col center">
         <div id="header">
             <h1>Etch-a-Sketch</h1>
@@ -32,16 +32,18 @@
                     <option value="2">2x2</option>
                     <option value="4">4x4</option>
                     <option value="8">8x8</option>
-                    <option value="16">16x16</option>
+                    <option value="16" selected>16x16</option>
                     <option value="32">32x32</option>
                     <option value="64">64x64</option>
                     <option value="128">128x128</option>
                     <option value="256">256x256</option>
-                    <option value="512">512x512</option>
                 </select>
             </div>
         </div>
-        <div id="gameBoardWrapper">
+        <div id="subMenu" class="row">
+            <button id="reset" type="button" onclick="reset()">Reset</button>
+        </div>
+        <div id="gameBoardWrapper" class="row">
             <!-- Auto-filled by JavaScript -->
         </div>
         <div id="footer">

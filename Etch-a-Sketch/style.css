@@ -14,10 +14,14 @@
     margin: 28px auto;
     gap: 32px;
 }
+#subMenu {
+    margin-bottom: 28px;
+}
 
 #gameBoardWrapper {
     width: 512px;
     height: 512px;
     padding: 0px;
     border: 3px solid black;
+    flex-wrap: wrap;
 }
