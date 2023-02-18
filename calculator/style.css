@@ -9,17 +9,32 @@
     background-color: grey;
     border: 4px solid black;
     width: 500px;
-    height: 700px;
+    height: 750px;
     padding: 16px;
 }
 #screen {
     background-color: black;
     color: white;
     margin: 12px;
+    padding: 12px;
     width: 476px;
     height: 200px;
     border: 1px solid white;
     border-radius: 6px;
+    font-size: 24px;
+}
+#screen div {
+    width: 100%;
+    height: 50%;
+}
+#lowerScreen div {
+    width: 50%;
+    height: 100%;
+}
+#errorText {
+    color: red;
+    font-weight: bolder;
+    text-align: left;
 }
 
 #buttonWrapper {
@@ -36,7 +51,7 @@
 }
 
 #operandWrapper { width: 60%; }
-#operandWrapper div, #operatorWrapper div {
+#operandWrapper div, #operatorWrapper div, #clear {
     width: 72px;
     height: 48px;
     background-color: white;
@@ -45,8 +60,9 @@
     border-radius: 3px;
     padding: 24px 0px 0px 0px;
 }
-#zero { width: 151px; }
-#operandWrapper div:hover, #operatorWrapper div:hover {
+#zero { width: 151px !important; }
+#clear { width: 151px; margin-right: 45px; text-align: center; float: right; }
+#operandWrapper div:hover, #operatorWrapper div:hover, #clear:hover {
     cursor: pointer;
     background-color: rgb(173, 216, 230, 50);
     font-weight: bold;

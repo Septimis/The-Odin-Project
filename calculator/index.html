@@ -7,13 +7,20 @@
 
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
+        <script src="Stack.js" defer></script>
     </head>
     <body class="col center">
         <div id="header">
             <h1>Welcome to the Calculator Application for The Odin Project.
         </div>
         <div id="calculatorWrapper">
-            <div id="screen"></div>
+            <div id="screen" class="col">
+                <div id="upperScreen"></div>
+                <div id="lowerScreen" class="row">
+                    <div id="errorText"></div>
+                    <div id="result"></div>
+                </div>
+            </div>
             <div id="buttonWrapper" class="row">
                 <div id="operandWrapper" class="row center">
                     <div>7</div>
@@ -31,8 +38,6 @@
                 <div id="operatorWrapper" class="row center">
                     <div>(</div>
                     <div>)</div>
-                    <div>pow</div>
-                    <div>sqrt</div>
                     <div>*</div>
                     <div>/</div>
                     <div>+</div>
@@ -41,6 +46,7 @@
                     <div>=</div>
                 </div>
             </div>
+            <div id="clear">CLR</div>
         </div>
     </body>
 </html>
