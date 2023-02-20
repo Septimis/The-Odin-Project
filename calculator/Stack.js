@@ -10,6 +10,7 @@ class Stack {
     }
     peek() { return this.items[this.items.length - 1]; }
     isEmpty() { return (this.items.length === 0); }
+    getSize() { return this.items.length; }
     printStack() {
         for(let element in this.items) console.log(`${element} `);
     }
