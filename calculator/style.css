@@ -51,7 +51,7 @@
 }
 
 #operandWrapper { width: 60%; }
-#operandWrapper div, #operatorWrapper div, #clear {
+#operandWrapper div, #operatorWrapper div, #clear, #del {
     width: 72px;
     height: 48px;
     background-color: white;
@@ -62,7 +62,8 @@
 }
 #zero { width: 151px !important; }
 #clear { width: 151px; margin-right: 45px; text-align: center; float: right; }
-#operandWrapper div:hover, #operatorWrapper div:hover, #clear:hover {
+#del { margin-left: 13px; text-align: center; float: left; width: 75px;}
+#operandWrapper div:hover, #operatorWrapper div:hover, #clear:hover, #del:hover{
     cursor: pointer;
     background-color: rgb(173, 216, 230, 50);
     font-weight: bold;
