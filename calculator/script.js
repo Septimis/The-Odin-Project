@@ -183,3 +183,31 @@ document.getElementById('clear').addEventListener('click', () => {
 function del() {
     if(screen.innerText.length > 0) screen.innerText = screen.innerText.substring(0, screen.innerText.length - 1);
 }
+
+document.addEventListener('keydown', (event) => {
+	
+	let getOperators = {
+		'/': 'divide',
+		'x': 'multiply',
+		'*': 'multiply',
+		'%': 'remainder',
+		'+': 'plus',
+		'-': 'minus'
+	}
+
+	if(!isNaN(event.key) && event.key !== ' '){
+		document.getElementById(`digit-${event.key}`).click();
+	}
+	if (['/', 'x', '+', '-', '*', '%'].includes(event.key)) {
+		document.getElementById(getOperators[event.key]).click();
+	}
+	if (event.key === 'Backspace' || event.key ==='c' || event.key === 'C') {
+		document.getElementById('clear').click();	
+	}
+	if (event.key === '=' || event.key === 'Enter') {
+		document.getElementById('equals').click();	
+	}
+	if (event.key === '.') {
+		document.getElementById('decimal').click();	
+	}
+});
